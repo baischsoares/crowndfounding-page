@@ -1,0 +1,67 @@
+.sobre-titulo{
+  margin-bottom: 40px;
+}
+.sobre-texto {
+  margin-bottom: 20px;
+  
+}
+
+.tipos-contribuicao{
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.tipos-contribuicao p{
+  grid-column: 1/-1;
+}
+.tipos-contribuicao button{
+  grid-column: 2;
+  grid-row: 3;
+}
+.valor-contribuicao {
+  justify-self: end;
+}
+.numeros-restantes{
+  font-weight: 700;
+  font-size: 2rem;
+  
+}
+.botao-apoio{
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  align-content: center;
+  cursor: pointer;
+  justify-self: end;
+  background-color: var(--verdeClaro);
+  font-weight: 500;
+  color: white;
+}
+.botao-apoio:hover{
+  background-color: var(--verdeEscuro);
+}
+
+
+.tipos-contribuicao.inativo h3{
+ color: #727272;
+}
+.tipos-contribuicao.inativo .valor-contribuicao{
+  color: #a6cac6;
+ }
+ .tipos-contribuicao.inativo p{
+  color: #ababab;
+ }
+ .tipos-contribuicao.inativo .numeros-restantes{
+  color: #727272;
+ }
+.tipos-contribuicao.inativo button{
+  background-color: #cbcbcb;
+  cursor: default;
+ }
+ 

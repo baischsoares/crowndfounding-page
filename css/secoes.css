@@ -1,0 +1,91 @@
+.secao{
+  background-color: white;
+  border-radius: 10px;
+  max-width: 730px;
+  margin: 40px auto;
+  box-sizing: border-box;
+  padding: 40px 50px;
+}
+.principal{
+text-align: center;
+
+}
+.principal h1{
+  margin-bottom: 20px;
+}
+.principal p{
+  margin-bottom: 40px;
+
+
+}
+.principal-botoes{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-back, .bookmark{
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: none;
+  align-content: center;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+.btn-back{
+  background-color: var(--verdeClaro);
+  color: white;
+  font-weight: 500;
+}
+.btn-back:hover{
+background-color: var(--verdeEscuro);
+color: white;
+}
+.bookmark{
+  background-color: #f4f4f4;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 0 30px 30px 0;
+ 
+}
+.bookmark::before{
+  content: url(../images/icon-bookmark.svg);
+  position: absolute;
+  left: -40px;
+}
+.bookmark:hover{
+  color:var(--verdeEscuro);
+}
+.bookmark:hover::before{
+  content: url(../images/icon-bookmark-hover.svg);
+  color:var(--verdeEscuro);
+}
+
+/*Números */
+.numeros-dados{
+  display: flex;
+  flex-wrap: wrap;
+}
+.numeros-dados li{
+  padding-right: 60px;
+  padding-left: 40px;
+  border-right: 1px solid #dfdfdf;
+}
+.numeros-dados li:first-child{
+  padding-left: 0px;
+}
+.numeros-dados li:last-child{
+  border: none;
+}
+.numeros-titulo{
+font-size: 1.75rem;
+margin-bottom: 5px;
+}
+.numeros-texto{
+font-size: 1rem;
+}
+
+progress{
+  height: 30px;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+
+.header{
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.menu{
+  display: flex;
+  gap: 40px;
+}
+.menu a{
+  color: var(--preto);
+  font-weight: 500;
+  font-size: .8rem;
+  transition: .3s;
+}
+.menu a:hover{
+  color:var(--verdeEscuro)
+}

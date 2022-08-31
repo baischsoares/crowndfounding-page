@@ -1,0 +1,101 @@
+.modal{
+  position: relative;
+  display: none;
+}
+.fechar-modal{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+.modal h3{
+  margin-bottom: 20px;
+}
+
+.modal-tipos-contribuicao {
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+.modal-tipos-contribuicao.ativo{
+  border: 1px solid var(--verdeEscuro);
+}
+.titulo-modal{
+  align-items: center;
+  justify-content: space-between;
+}
+.titulo-modal h3{
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: 5px;
+}
+.titulo-modal span{
+  font-size: 1rem;
+}
+.restantes-modal {
+  grid-row: 1;
+  grid-column: -1;
+}
+.modal-tipos-contribuicao p{
+  grid-row:2;
+  grid-column: 2/4;
+}
+.numeros-modal{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.valor-contribuir{
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 40px;
+  grid-row: 3;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.valor-contribuir p {
+  display: inline-block;
+}
+.valorContribuido{
+  width: 80px;
+  height: 43px;
+  border-radius: 30px;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+  padding-left: 30px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.botao-modal{
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  align-content: center;
+  cursor: pointer;
+  justify-self: end;
+  background-color: var(--verdeClaro);
+  font-weight: 500;
+  color: white;
+}
+.botao-apoio:hover{
+  background-color: var(--verdeEscuro);
+}
+.input-modal{
+  width: 20px;
+  height: 20px;
+}
+.input-modal:active{
+  border: none;
+}
