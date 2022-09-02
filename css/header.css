@@ -1,22 +1,35 @@
+header{
+  background-image: url('../images/image-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  height: 400px;
+}
 
-.header{
-  padding: 40px 0px;
+.header-secao{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  padding:40px 0px
 }
 
 .menu{
-  display: flex;
-  gap: 40px;
+  display: none;
 }
-.menu a{
-  color: var(--preto);
-  font-weight: 500;
-  font-size: .8rem;
-  transition: .3s;
-}
-.menu a:hover{
-  color:var(--verdeEscuro)
-}
+
+@media (min-width: 1200px){
+  header {
+    background-image: url('../images/image-hero-desktop.jpg');
+  }
+  .menu-mobile {
+    display: none;
+  }
+  .menu{
+    display: flex;
+    gap: 20px;
+  }
+  .menu li a{
+    color: var(--preto);
+  }
+  .menu li a:hover{
+    color: var(--verdeEscuro);
+  }
+} 
