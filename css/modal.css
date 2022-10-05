@@ -1,18 +1,33 @@
 .modal {
-  position: relative;
-  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll ;
 }
-.modal h3{
-  margin-bottom: 20px;
+.modal::-webkit-scrollbar { 
+	display: none;
+}
+.modal.ativo {
+  display: grid;
 }
 
-.modal.inativo {
-display: none;
+.div-modal{
+  margin: 10px auto;
+  width: 500px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
+
+
 .fechar-modal {
-  position: absolute;
-  top: 20px;
-  right: 20px;
   font-size: 2rem;
   font-weight: 700;
   border: none;
@@ -22,12 +37,21 @@ display: none;
   color: #aaa;
 }
 
+.tituloBotao{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+
 .modal-tipos-contribuicao {
-  margin-top: 30px;
+  margin-top: 15px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 20px;
 }
 
 
@@ -35,7 +59,7 @@ display: none;
   display: grid;
   grid-template-columns: 20px 1fr;
   align-items: flex-start;
-  gap: 20px;
+  gap: 5px 20px;
 }
 .modal-grid-input h3{
   font-size: 1rem;
@@ -44,11 +68,11 @@ display: none;
 
 .valor-contribuicao{
   display: inline-block;
-  margin-bottom: 20px;
+  margin: 5px 0px;
 }
 
 .modal-tipos-contribuicao p{
-  margin-bottom: 20px;
+   margin: 5px 0px; 
 }
 .numeros-modal{
   font-size: 1.5rem;
@@ -60,12 +84,24 @@ display: none;
   margin-top: 20px;
   padding-top: 30px;
   text-align: center;
-
+  display: none;
 }
 
+.valor-contribuir.inputAtivo{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+
 .valor-contribuir p {
+  font-size: 0.75rem;
   display: inline-block;
   text-align: center;
+}
+
+.modal-tipos-contribuicao p {
+  grid-column: 1 /-1;
 }
 
 .valorContribuido {
@@ -78,8 +114,6 @@ display: none;
   font-weight: 700;
 }
 
-
-
 .input-modal {
   width: 20px;
   height: 20px;
@@ -89,11 +123,15 @@ display: none;
   border: none;
 }
 
+.restantes-modal {
+  grid-column: 2;
+  justify-self: right;
+}
 
 .contribuicao-input{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 10px;
 }
@@ -115,17 +153,15 @@ display: none;
    cursor: default;
   }
 
-  @media (min-width: 1200px ){
-    .titulo-modal{
-      display: flex;
-      gap: 20px;
-    }
-    .valor-contribuir{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-    .restantes-modal{
-      text-align: end;
-    }
+@media (max-width: 500px ){
+    .div-modal{
+      margin: 10px auto;
+      width: 320px;
   }
+   .valor-contribuir p{
+    display: none;
+  }
+  .valor-contribuir.inputAtivo {
+    justify-content: space-around;
+ } 
+}

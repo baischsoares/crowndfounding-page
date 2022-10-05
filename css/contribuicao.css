@@ -26,7 +26,7 @@
   margin-bottom: 10px;
   
 }
-.botao-apoio{
+.botao-apoio, .botao-select{
   padding: 15px 30px;
   border-radius: 30px;
   border: none;
@@ -35,7 +35,6 @@
   background-color: var(--verdeClaro);
   font-weight: 500;
   color: white;
-  justify-self: self-start;
  
 }
 .botao-apoio:hover{
@@ -77,6 +76,6 @@
     grid-column: 1 / -1;
   }
   .tipos-contribuicao button{
-    justify-self: end;
+    justify-self: flex-end;
   }
 }

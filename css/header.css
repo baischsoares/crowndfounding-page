@@ -1,6 +1,7 @@
 header{
-  background-image: url('../images/image-hero-mobile.jpg');
+  background-image: url('../images/image-hero-desktop.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   height: 400px;
 }
 
@@ -15,21 +16,8 @@ header{
   display: none;
 }
 
-@media (min-width: 1200px){
+@media (max-width: 500px){
   header {
-    background-image: url('../images/image-hero-desktop.jpg');
+    background-image: url('../images/image-hero-mobile.jpg');
   }
-  .menu-mobile {
-    display: none;
-  }
-  .menu{
-    display: flex;
-    gap: 20px;
-  }
-  .menu li a{
-    color: var(--preto);
-  }
-  .menu li a:hover{
-    color: var(--verdeEscuro);
-  }
-} 
+}

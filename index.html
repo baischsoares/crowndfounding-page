@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -42,16 +41,15 @@
         <button class="btn-back">Back this project</button>
       </div>
   </section>
-
   <section class="container">
     <div class="secao">
       <ul class="numeros-dados">
         <li>
-          <h3 class="numeros-titulo">$89,914</h3>
+          <h3 class="numeros-titulo valorArrecadado"></h3>
           <span class="numeros-texto corTexto">$100,000 backed</span>
         </li>
         <li>
-          <h3 class="numeros-titulo">5,007</h3>
+          <h3 class="numeros-titulo contribuintes">5,007</h3>
           <span class="numeros-texto corTexto">total backers</span>
         </li>
         <li>
@@ -59,10 +57,10 @@
           <span class="numeros-texto corTexto">days left</span>
         </li>
       </ul>
-      <progress id="valor-arrecadado" value="40000" max="100000"> 32% </progress>
+      <progress id="valor-arrecadado" max="100000"> </progress>
     </div>
   </section>
-
+  
   <section class="container">
     <div class="secao contribuicao">
       <h3 class="sobre-titulo">About this project</h3>
@@ -76,135 +74,150 @@
         computer
         to allow notepads, pens, and USB sticks to be stored under the stand.</p>
 
-      <div class="tipos-contribuicao">
+      <div class="tipos-contribuicao" data-informacao="bamboo">
         <h3>Bamboo Stand</h3>
         <span class='valor-contribuicao cor-verdeClaro'>Pledge $25 or more</span>
         <p class="corTexto"> You get an ergonomic stand made of natural bamboo. You've helped us launch our
           promotional
           campaign, and
           you’ll be added to a special Backer member list.</p>
-        <div><span class="numeros-restantes"> 101 </span> <span class="corTexto">left</span></div>
-        <button class="botao-apoio">Select Reward</button>
+        <div><span class="numeros-restantes nrBamboo"> 101 </span> <span class="corTexto">left</span></div>
+        <button class="botao-select" bamboo>Select Reward</button>
       </div>
 
-      <div class="tipos-contribuicao">
+      <div class="tipos-contribuicao" data-informacao="black">
         <h3>Black Edition Stand</h3>
         <span class='valor-contribuicao cor-verdeClaro'>Pledge $75 or more</span>
         <p class="corTexto"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added
           to
           our Backer
           member list. Shipping is included.</p>
-        <div><span class="numeros-restantes"> 64 </span> <span class="corTexto">left</span></div>
-        <button class="botao-apoio">Select Reward</button>
+        <div><span class="numeros-restantes nrBlack"> 64 </span> <span class="corTexto">left</span></div>
+        <button class="botao-select" black>Select Reward</button>
       </div>
 
-      <div class="tipos-contribuicao inativo">
+      <div class="tipos-contribuicao">
         <h3>Mahogany Special Edition</h3>
         <span class='valor-contribuicao cor-verdeClaro'>Pledge $200 or more</span>
         <p class="corTexto"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
           You’ll be added
           to our Backer member list. Shipping is included.</p>
-        <div><span class="numeros-restantes"> 0 </span> <span class="corTexto">left</span></div>
-        <button class="botao-apoio">Select Reward</button>
+        <div><span class="numeros-restantes nrMahogany"> 3 </span> <span class="corTexto">left</span></div>
+        <button class="botao-select" mahogany>Select Reward</button>
       </div>
     </div>
   </section>
 
-  <section class="modal inativo container secao">
-    <h3>Back this project</h3>
-    <button class="fechar-modal">x</button>
-    <p class="corTexto"> Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-    <div class="modal-tipos-contribuicao">
-      <div class="modal-grid-input">
-        <input type="radio" name="tipo-contribuicao" value="bamboo-stand" class="input-modal">
-        <h3>Pledge with no reward</h3>
+
+
+  <section class="modal">
+    <div class="div-modal">
+      <div class="tituloBotao">
+        <h3>Back this project</h3>
+        <button class="fechar-modal">x</button>
       </div>
-      <p class="corTexto"> Choose to support us without a reward if you simply believe in our project. As a backer,
-        you will be signed up to receive product updates via email.</p>
+      
+      <p class="corTexto"> Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+      <div class="modal-tipos-contribuicao">
+        <div class="modal-grid-input">
+          <input type="radio" name="tipo-contribuicao" class="input-modal">
+          <h3>Pledge with no reward</h3>
+        </div>
+        <p class="corTexto"> Choose to support us without a reward if you simply believe in our project. As a backer,
+          you will be signed up to receive product updates via email.</p>
+      </div>
+
+
+      <div class="modal-tipos-contribuicao">
+        <div class="modal-grid-input">
+          <input type="radio" name="tipo-contribuicao" value="bamboo-stand" class="input-modal">
+          <div class="titulo-modal">
+            <h3>Bamboo Stand</h3>
+            <span class='valor-contribuicao cor-verdeClaro'>Pledge $25 or more</span>
+          </div>
+          <p class="corTexto"> You get an ergonomic stand made of natural bamboo. You've helped us launch our
+            promotional
+            campaign, and
+            you’ll be added to a special Backer member list.
+          </p>
+          <div class="restantes-modal"><span class="numeros-modal nrBamboo"> </span> <span class="corTexto">left</span>
+          </div>
+        </div>
+        <div class="valor-contribuir ">
+          <p class="corTexto">Enter your pledge</p>
+          <div class="contribuicao-input">
+            <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
+            <button class="botao-apoio" data-bamboo>Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-tipos-contribuicao">
+        <div class="modal-grid-input">
+          <input type="radio" name="tipo-contribuicao" value="black-stand" class="input-modal">
+          <div class="titulo-modal">
+            <h3>Black Edition Stand</h3>
+            <span class='valor-contribuicao cor-verdeClaro'>Pledge $75 or more</span>
+          </div>
+          <p class="corTexto"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added
+            to
+            our Backer
+            member list. Shipping is included.
+          </p>
+          <div class="restantes-modal"><span class="numeros-modal nrBlack"> 64 </span> <span
+              class="corTexto">left</span></div>
+        </div>
+        <div class="valor-contribuir">
+          <p class="corTexto">Enter your pledge</p>
+          <div class="contribuicao-input">
+            <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
+            <button class="botao-apoio" data-black>Continue</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal-tipos-contribuicao">
+        <div class="modal-grid-input">
+          <input type="radio" name="tipo-contribuicao" value="mahogany-stand" class="input-modal">
+          <div class="titulo-modal">
+            <h3>Mahogany Special Edition</h3>
+            <span class='valor-contribuicao cor-verdeClaro'>Pledge $200 or more</span>
+          </div>
+          <p class="corTexto"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
+            You’ll be added
+            to our Backer member list. Shipping is included.
+          </p>
+          <div class="restantes-modal"><span class="numeros-modal nrMahogany"> 3</span> <span
+              class="corTexto">left</span></div>
+        </div>
+        <div class="valor-contribuir">
+          <p class="corTexto">Enter your pledge</p>
+          <div class="contribuicao-input">
+            <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
+            <button class="botao-apoio" data-mahogany>Continue</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 
-    <div class="modal-tipos-contribuicao">
-      <div class="modal-grid-input">
-        <input type="radio" name="tipo-contribuicao" value="bamboo-stand" class="input-modal">
-        <div class="titulo-modal">
-          <h3>Bamboo Stand</h3>
-          <span class='valor-contribuicao cor-verdeClaro'>Pledge $25 or more</span>
-        </div>
-      </div>
-      <p class="corTexto"> You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional
-        campaign, and
-        you’ll be added to a special Backer member list.
-      </p>
-      <div class="restantes-modal"><span class="numeros-modal"> 101 </span> <span class="corTexto">left</span></div>
-      <div class="valor-contribuir">
-        <p class="corTexto">Enter your pledge</p>
-        <div class="contribuicao-input">
-          <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
-          <button class="botao-apoio">Continue</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="modal-tipos-contribuicao">
-      <div class="modal-grid-input">
-        <input type="radio" name="tipo-contribuicao" value="bamboo-stand" class="input-modal">
-        <div class="titulo-modal">
-          <h3>Black Edition Stand</h3>
-          <span class='valor-contribuicao cor-verdeClaro'>Pledge $75 or more</span>
-        </div>
-      </div>
-      <p class="corTexto"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added
-        to
-        our Backer
-        member list. Shipping is included.
-      </p>
-      <div class="restantes-modal"><span class="numeros-modal"> 64 </span> <span class="corTexto">left</span></div>
-      <div class="valor-contribuir">
-        <p class="corTexto">Enter your pledge</p>
-        <div class="contribuicao-input">
-          <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
-          <button class="botao-apoio">Continue</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="modal-tipos-contribuicao">
-      <div class="modal-grid-input">
-        <input type="radio" name="tipo-contribuicao" value="bamboo-stand" class="input-modal">
-        <div class="titulo-modal">
-          <h3>Mahogany Special Edition</h3>
-          <span class='valor-contribuicao cor-verdeClaro'>Pledge $200 or more</span>
-        </div>
-      </div>
-      <p class="corTexto"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
-        You’ll be added
-        to our Backer member list. Shipping is included.
-      </p>
-      <div class="restantes-modal"><span class="numeros-modal"> 0</span> <span class="corTexto">left</span></div>
-      <div class="valor-contribuir">
-        <p class="corTexto">Enter your pledge</p>
-        <div class="contribuicao-input">
-          <input type="text" name="valorContribuido" class="valorContribuido" placeholder="$">
-          <button class="botao-apoio">Continue</button>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <section class="modal inativo container secao">
+  <section class="obrigado">
     <div class="modal-obrigado">
       <img src="./images/icon-check.svg" alt="">
       <h3>Thanks for your support!</h3>
       <p class="corTexto"> Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide.
         You will get an email once our campaign is completed.</p>
-      <button class="botao-modal">Got it!</button>
+      <button class="botao-modal obrigadoBtn">Got it!</button>
     </div>
   </section>
 
-
+  <script src="script.js"></script>
 </body>
 
 </html>
